@@ -6,6 +6,11 @@ function mostrarInformacion() {
       <p>Aquí podrás explorar los personajes, casas y más sobre el mundo de Westeros.</p>
     `;
 
+    const imagen = document.createElement("img");
+    imagen.src = "https://upload.wikimedia.org/wikipedia/commons/b/b5/Logo_Game_of_Thrones.png"; 
+    imagen.alt = "Logo Game of Thrones";
+    app.appendChild(imagen);
+
     
   }
   
