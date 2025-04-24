@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game of Thrones App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- Contenido dinámico aquí -->
+  </main>
+
+  <aside class="c-nav">
+    <button class="c-nav-item" onclick="mostrarPersonajes()">Personajes</button>
+    <button class="c-nav-item" onclick="mostrarCasas()">Casas</button>
+    <button class="c-nav-item" onclick="mostrarInformacion()">Información</button>
+    <button class="c-nav-item" onclick="mostrarUsuario()">Usuario</button>
+  </aside>
+
+  <div class="buscador-container">
+    <input type="text" id="buscador" placeholder="Buscar personaje...">
+    <button onclick="buscarPersonaje()">Buscar</button>
+  </div>
+  
+  <div class="filtro-container">
+    <select id="filtro" onchange="filtrarPorCasa()">
+      <option value="">Filtrar por Casa</option>
+      <option value="Stark">Stark</option>
+      <option value="Lannister">Lannister</option>
+      <option value="Targaryen">Targaryen</option>
+    </select>
+  </div>
+
+  <!-- Scripts completos -->
+  <script src="js/apiGot.js"></script>
+  <script src="js/personajes.js"></script>
+  <script src="js/perfil.js"></script>
+  <script src="js/casas.js"></script>
+  <script src="js/informacion.js"></script>
+  <script src="js/buscadorFiltro.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", cargarPersonajes);
+  </script>
+</body>
+</html>
